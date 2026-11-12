@@ -1,0 +1,107 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#F388C0;--pink2:#FF5FAE;--lime:#E4FB00;--ink:#0b0b0b;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1280px;height:800px;overflow:hidden;font-family:Outfit,sans-serif;background:var(--pink);color:var(--ink)}
+.screen{display:none;width:1280px;height:800px;position:relative;overflow:hidden;background:var(--pink)}
+.screen.on{display:block}
+.chunky{font-family:'Archivo Black',sans-serif;letter-spacing:-.01em;text-transform:uppercase;line-height:.92}
+.shadowtxt{color:#fff;-webkit-text-stroke:3px var(--ink);paint-order:stroke fill;text-shadow:6px 7px 0 var(--ink)}
+.top{position:absolute;left:48px;right:48px;top:36px;display:flex;align-items:center;justify-content:space-between}
+.top img{height:74px}
+.x{font-weight:600;font-size:22px;letter-spacing:.32em;display:flex;align-items:center;gap:16px}
+.x b{font-family:'Archivo Black';font-size:20px;letter-spacing:.5em}
+.pill{font-style:normal;display:inline-block;background:var(--lime);border:3px solid var(--ink);border-radius:999px;padding:6px 18px;font-weight:800}
+.card{background:#fff;border:4px solid var(--ink);border-radius:26px;box-shadow:8px 9px 0 var(--ink)}
+/* HOME */
+#home h1{position:absolute;left:48px;top:140px;font-size:66px}
+#home .sub{position:absolute;left:52px;top:290px;font-size:24px;font-weight:600}
+#home .row{position:absolute;left:48px;right:48px;top:340px;display:grid;grid-template-columns:repeat(5,1fr);gap:26px}
+#home .card{height:300px;overflow:hidden;display:flex;flex-direction:column}
+#home .card .im{flex:1;background-size:cover;background-position:center 30%}
+#home .card .lab{padding:12px 14px 14px;display:flex;justify-content:space-between;align-items:center;border-top:4px solid var(--ink)}
+#home .card .lab span{font-family:'Archivo Black';font-size:20px;text-transform:uppercase}
+#home .card .lab .pill{font-size:18px;padding:3px 12px}
+#home .bar{position:absolute;left:0;right:0;bottom:0;height:86px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;gap:18px;font-size:26px;font-weight:600}
+#home .bar .pill{color:var(--ink);font-size:22px}
+/* PAY */
+#pay .sel{position:absolute;left:70px;top:150px;width:330px;height:470px}
+#pay .sel .im{height:360px;background-size:cover;background-position:center 30%;border-radius:22px 22px 0 0}
+#pay .sel .lab{border-top:4px solid var(--ink);padding:18px;font-family:'Archivo Black';font-size:26px;display:flex;justify-content:space-between;align-items:center}
+#pay h1{position:absolute;left:470px;top:170px;font-size:92px}
+#pay p{position:absolute;left:474px;top:420px;font-size:28px;font-weight:600;max-width:640px;line-height:1.3}
+#pay .arrow{position:absolute;left:474px;top:530px;display:flex;align-items:center;gap:20px;font-size:26px;font-weight:800}
+#pay .arrow .circ{width:88px;height:88px;border-radius:50%;background:var(--lime);border:4px solid var(--ink);display:grid;place-items:center;font-size:48px;box-shadow:5px 6px 0 var(--ink)}
+/* THANKS */
+#thanks{background:var(--ink)}
+#thanks .glow{position:absolute;inset:0;background:radial-gradient(circle at 30% 40%,#ff5fae 0,#F388C0 35%,#F388C0 100%)}
+#thanks h1{position:absolute;left:60px;top:130px;font-size:104px}
+#thanks .lead{position:absolute;left:64px;top:370px;font-size:32px;font-weight:600;max-width:640px;line-height:1.25}
+#thanks .prizes{position:absolute;left:60px;top:500px;display:flex;flex-wrap:wrap;gap:12px;max-width:720px}
+#thanks .prizes .pill{font-size:20px;background:#fff}
+#thanks .prizes .pill.star{background:var(--lime)}
+#thanks .qr{position:absolute;right:70px;top:200px;width:360px;padding:24px;text-align:center}
+#thanks .qr img{width:100%;display:block}
+#thanks .qr div{font-family:'Archivo Black';font-size:30px;margin-top:12px;text-transform:uppercase}
+#thanks .offer{position:absolute;left:60px;top:470px;width:640px;padding:22px 28px;background:var(--lime)}#thanks .offer .k{font-weight:800;letter-spacing:.2em;font-size:15px}#thanks .offer .o{font-size:54px;margin:10px 0 8px}#thanks .offer .s{font-size:20px;font-weight:600}#thanks .offer .code{position:absolute;right:24px;top:58px;background:var(--ink);color:var(--lime);font-family:"Archivo Black";font-size:22px;padding:8px 14px;border-radius:10px;letter-spacing:.08em}
+#thanks .tc{position:absolute;left:64px;bottom:30px;font-size:15px;opacity:.75;max-width:1100px}
+#thanks .top{justify-content:flex-start;gap:24px}
+/* ATTRACT */
+#ad{background:var(--ink);color:#fff}
+#ad .stripe{position:absolute;inset:0;background:repeating-linear-gradient(-45deg,#F388C0 0 60px,#ff9fd0 60px 120px)}
+#ad .box{position:absolute;left:60px;top:150px;right:60px;bottom:110px;background:var(--ink);border:4px solid var(--ink);border-radius:30px;box-shadow:10px 12px 0 #000;padding:56px 60px;color:#fff}
+#ad .kick{color:var(--lime);font-weight:800;letter-spacing:.3em;font-size:24px}
+#ad h2{font-size:116px;margin-top:18px;color:#fff}
+#ad h2 em{font-style:normal;color:var(--pink)}
+#ad .meta{margin-top:30px;display:flex;gap:16px}
+#ad .meta .pill{font-size:26px;color:var(--ink)}
+#ad .tag{position:absolute;right:60px;bottom:48px;font-size:18px;font-weight:600;color:#bbb}
+#ad .foot{position:absolute;left:60px;right:60px;bottom:30px;display:flex;justify-content:space-between;color:var(--ink);font-weight:800;font-size:22px}
+</style></head>
+<body>
+
+<section class="screen" id="home">
+  <div class="top"><img src="circuit_logo.png"><div class="x">×&nbsp;<b>SPRAY</b></div></div>
+  <h1 class="chunky shadowtxt">Fresh for the<br>dancefloor.</h1>
+  <div class="sub">Pick a scent. Tap your card. One spray, £1.50.</div>
+  <div class="row">
+    <div class="card"><div class="im" style="background-image:url(bottle1.jpg)"></div><div class="lab"><span>Fresh</span><i class="pill">£1.50</i></div></div>
+    <div class="card"><div class="im" style="background-image:url(bottle2.jpg)"></div><div class="lab"><span>Sweet</span><i class="pill">£1.50</i></div></div>
+    <div class="card"><div class="im" style="background-image:url(bottle3.jpg)"></div><div class="lab"><span>Warm</span><i class="pill">£1.50</i></div></div>
+    <div class="card"><div class="im" style="background-image:url(bottle4.jpg)"></div><div class="lab"><span>Floral</span><i class="pill">£1.50</i></div></div>
+    <div class="card"><div class="im" style="background-image:url(bottle5.jpg)"></div><div class="lab"><span>Woody</span><i class="pill">£1.50</i></div></div>
+  </div>
+  <div class="bar">Tap a scent to start <span class="pill">CARD &amp; CONTACTLESS ONLY</span></div>
+</section>
+
+<section class="screen" id="pay">
+  <div class="top"><img src="circuit_logo.png"><div class="x">×&nbsp;<b>SPRAY</b></div></div>
+  <div class="sel card"><div class="im" style="background-image:url(bottle3.jpg)"></div><div class="lab">WARM <i class="pill" style="font-family:Outfit;font-size:22px">£1.50</i></div></div>
+  <h1 class="chunky shadowtxt">Good<br>choice.</h1>
+  <p>Tap your card or phone on the reader below. Then hold your wrist or neck to outlet 3 and press the button.</p>
+  <div class="arrow"><div class="circ">↓</div>Tap to pay. Contactless, card, Apple&nbsp;Pay &amp; Google&nbsp;Pay</div>
+</section>
+
+<section class="screen" id="thanks">
+  <div class="glow"></div>
+  <div class="top"><img src="circuit_logo.png"></div>
+  <h1 class="chunky shadowtxt">Smelling<br>good.</h1>
+  <div class="lead">Enjoy the rest of your night. Don't miss what's next at Circuit:</div>
+  <div class="offer card"><div class="k">NEXT UP AT CIRCUIT</div><div class="o chunky">NYE 2026</div><div class="s">Thursday 31 December · tickets on sale now</div></div>
+  <div class="qr card"><img src="qr.svg"><div>Get NYE tickets</div></div>
+  <div class="tc">Circuit picks what shows here; SPRAY updates the screen remotely, any night. QR shown is a placeholder.</div>
+</section>
+
+<section class="screen" id="ad">
+  <img src="nye.jpg" style="position:absolute;left:0;top:0;width:1280px;height:640px;object-fit:cover">
+  <div style="position:absolute;left:0;right:0;top:640px;bottom:0;background:var(--ink);display:flex;align-items:center;justify-content:space-between;padding:0 48px;color:#fff">
+    <img src="circuit_logo.png" style="height:70px">
+    <div style="font-family:'Archivo Black';font-size:30px;text-transform:uppercase">Tickets on sale now</div>
+    <div style="font-weight:600;font-size:20px;color:var(--lime)">Tap for a fresh spray →</div>
+  </div>
+</section>
+
+<script>const id=location.hash.slice(1)||'home';document.getElementById(id).classList.add('on');</script>
+</body></html>

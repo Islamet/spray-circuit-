@@ -1,0 +1,225 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SPRAY × Circuit — Venue Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Outfit:wght@200;300;400;600&family=Syne:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@page{size:1440px 810px;margin:0}
+:root{--bg:#0d0d0d;--fg:#f2f0ec;--mute:#9a9893;--line:#2a2a2a;--pink:#F388C0;--lime:#E4FB00}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:Outfit,sans-serif;font-weight:300}
+.page{width:1440px;height:810px;position:relative;overflow:hidden;page-break-after:always;background:var(--bg)}
+.hdr{position:absolute;left:64px;right:64px;top:40px;display:flex;justify-content:space-between;align-items:center;font-family:Syne;font-size:11px;letter-spacing:.42em;color:var(--fg)}
+.hdr .r{color:var(--mute);letter-spacing:.28em;font-size:10px}
+.ftr{position:absolute;left:64px;right:64px;bottom:34px;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:.3em;color:#6d6b67;text-transform:uppercase}
+h1,h2{font-weight:300;letter-spacing:-.01em;line-height:1.08}
+h2{font-size:52px}
+.rule{width:34px;height:2px;background:var(--pink);margin:26px 0}
+p{font-size:15px;line-height:1.65;color:#cfcdc8}
+.k{font-size:10px;letter-spacing:.3em;color:var(--mute);text-transform:uppercase}
+.pink{color:var(--pink)} .lime{color:var(--lime)}
+.chip{display:inline-block;font-family:'Archivo Black';font-size:11px;letter-spacing:.06em;background:var(--lime);color:#0b0b0b;border-radius:999px;padding:5px 12px;text-transform:uppercase}
+/* cover */
+.cover .logo{position:absolute;left:64px;top:210px;width:340px}
+.cover .x{position:absolute;left:68px;top:322px;font-family:Syne;font-size:30px;letter-spacing:.55em}
+.cover .tag{position:absolute;left:68px;top:392px;font-size:19px;line-height:1.5;color:#d8d6d1}
+.cover .m{position:absolute;right:20px;top:90px;width:900px}
+.cover .ftr{border:none}
+/* p2 */
+.split{position:absolute;inset:0;display:grid;grid-template-columns:700px 1fr}
+.split .ph{background-size:cover;background-position:65% 40%}
+.split .tx{padding:130px 64px 0 70px}
+.pts{margin-top:30px;display:grid;gap:22px}
+.pts div{border-top:1px solid var(--line);padding-top:16px}
+.pts b{display:block;font-weight:400;font-size:20px;margin-bottom:6px;color:var(--fg)}
+/* p3 screens */
+.grid4{position:absolute;left:64px;right:64px;top:290px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.grid4 img{width:100%;border-radius:10px;border:1px solid #333;display:block}
+.grid4 .n{font-family:Syne;font-size:10px;letter-spacing:.3em;color:var(--pink);margin:16px 0 6px}
+.grid4 b{font-weight:400;font-size:21px;display:block;margin-bottom:6px}
+.grid4 p{font-size:14px;line-height:1.55}
+/* p4 benefits */
+.cols{position:absolute;left:64px;right:64px;top:300px;display:grid;grid-template-columns:repeat(3,1fr);gap:56px 60px}.cols>div{border-top:1px solid var(--line);padding-top:18px}
+.cols b{display:block;font-weight:400;font-size:24px;margin-bottom:10px}
+.cols p{font-size:15.5px}
+/* p5 door */
+.door{position:absolute;left:64px;top:70px;width:640px}.door h2{font-size:44px}.door .rule{margin:18px 0}.door>p{font-size:14px}
+.door .pts{grid-template-columns:1fr 1fr;gap:14px 36px;margin-top:20px}.door .pts div{padding-top:12px}
+.door .pts b{font-size:16px;margin-bottom:4px}.door .pts p{font-size:12.5px;line-height:1.5}
+.door-ph{position:absolute;right:0;top:0;bottom:0;width:640px;background-size:cover;background-position:center}
+/* p6 numbers */
+.nums{position:absolute;right:64px;top:130px;width:620px}
+.nums .row3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:14px}
+.nums .row3 div{padding:16px 0}
+.nums .big{font-size:34px;font-weight:300}
+.nums small{display:block;font-size:11px;color:var(--mute);margin-top:4px}
+.tbl{margin-top:34px;width:560px}
+.tbl div{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:12px 0;font-size:13px;color:#cfcdc8}
+/* p7 */
+.steps{position:absolute;left:64px;top:290px;width:620px}
+.steps div{display:grid;grid-template-columns:44px 1fr;border-top:1px solid var(--line);padding:16px 0;font-size:14px;color:#cfcdc8;line-height:1.55}
+.steps div:last-child{border-bottom:1px solid var(--line)}
+.steps i{font-style:normal;font-family:Syne;font-size:10px;letter-spacing:.2em;color:var(--pink);padding-top:4px}
+.offer{position:absolute;right:64px;top:120px;width:560px}
+.offer h3{font-weight:300;font-size:30px;line-height:1.25;margin:14px 0 18px}
+.offer .ct{margin-top:38px;font-size:22px;line-height:1.6}
+.dot{width:30px;height:30px;border-radius:50%;background:var(--pink);color:#0b0b0b;font-family:"Archivo Black";font-size:14px;display:grid;place-items:center;border:2px solid #0b0b0b;transform:translate(-50%,-50%)}
+</style></head><body>
+
+<!-- 1 COVER -->
+<section class="page cover">
+  <img class="logo" src="circuit_logo.png">
+  <div class="x">× SPRAY</div>
+  <div class="tag">A fresh scent, on demand.<br>Made for Circuit.</div>
+  <img class="m" src="machine_circuit.png">
+  <div class="ftr"><span>Venue partner proposal · Prepared for Circuit · November 2026</span><span>getspray.co.uk</span></div>
+</section>
+
+<!-- 2 THE IDEA -->
+<section class="page">
+  <div class="split">
+    <div class="ph" style="background-image:url(club_circuit.jpg)"></div>
+    <div class="tx">
+      <div class="k">01 · The idea</div>
+      <h2 style="margin-top:18px">Not a vending machine.<br><span class="pink">Part of Circuit.</span></h2>
+      <div class="rule"></div>
+      <p>The standard SPRAY unit is a black box with its own branding. For Circuit we'd change that. The screen runs in Circuit's pink and lime, shows Circuit's logo on every page, and plays Circuit's own events between sales. Guests see a Circuit feature, not a third-party machine.</p>
+      <div class="pts">
+        <div><b>Your brand on the screen</b><p>Circuit's logo, colours and tone of voice on every screen, from choosing a scent to the thank-you.</p></div>
+        <div><b>Your next event after every sale</b><p>The moment a guest pays, the screen shows Circuit's next big night, like NYE, with a QR code to tickets. Circuit picks it, and it can change any night.</p></div>
+        <div><b>Pink trim on the unit itself</b><p>The front accents match Circuit's colours, so the unit looks like it was made for the room.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="ftr" style="left:764px"><span>getspray.co.uk</span><span>SPRAY × Circuit</span></div>
+</section>
+
+<!-- 3 SCREENS -->
+<section class="page">
+  <div class="hdr"><span>SPRAY × CIRCUIT</span><span class="r">02 — THE SCREEN</span></div>
+  <h2 style="position:absolute;left:64px;top:96px">Circuit's screen,<br>from start to finish.</h2>
+  <div class="grid4">
+    <div><img src="scr_home.png"><div class="n">01 — CHOOSE</div><b>Pick a scent</b><p>Five fragrances on a Circuit-pink menu. £1.50 a spray, card and contactless only.</p></div>
+    <div><img src="scr_pay.png"><div class="n">02 — PAY</div><b>Tap to pay</b><p>Clear steps: tap the card, wrist to the outlet, press the button. Nothing for staff to explain.</p></div>
+    <div><img src="scr_thanks.png"><div class="n">03 — THANK YOU</div><b>What's next at Circuit</b><p>Straight after paying, guests see Circuit's next event and a QR code to buy tickets.</p></div>
+    <div><img src="scr_ad.png"><div class="n">04 — BETWEEN SPRAYS</div><b>Circuit's ads</b><p>When nobody's using it, the screen loops Circuit's own event posters. A free ad screen on the wall.</p></div>
+  </div>
+  <div class="ftr"><span>getspray.co.uk</span><span>Screens shown are mock-ups · QR is a placeholder</span></div>
+</section>
+
+<!-- 4 FOR CIRCUIT -->
+<section class="page">
+  <div class="hdr"><span>SPRAY × CIRCUIT</span><span class="r">03 — WHAT CIRCUIT GETS</span></div>
+  <h2 style="position:absolute;left:64px;top:96px">A better night for guests.<br><span class="pink">Something back for Circuit.</span></h2>
+  <div class="cols">
+    <div><b>A free ad screen</b><p>A 10.1" screen in the toilet corridor or smoking area, running Circuit's event posters all night. SPRAY updates the content remotely whenever Circuit asks.</p></div>
+    <div><b>Ticket sales for the next night</b><p>Every sale ends on Circuit's next event and a QR to tickets. It reaches guests while they're out and enjoying themselves, and Circuit controls it.</p></div>
+    <div><b>25% of every spray</b><p>Circuit receives a quarter of net sales, paid monthly with a statement from the machine's own data. No invoices, no counting.</p></div>
+    <div><b>Costs nothing, ever</b><p>SPRAY supplies, installs, insures, stocks and services the unit. Circuit gives a wall and a socket. 25 W, about the same as a light bulb.</p></div>
+    <div><b>Guests feel fresher</b><p>Heat, dancing and a long night: a refresh at midnight is a small thing guests remember and post about.</p></div>
+    <div><b>Then Bonnies, and beyond</b><p>The same unit can wear each venue's brand. Once Circuit is live, the same setup can roll out to Bonnies and the other venues.</p></div>
+  </div>
+  <div class="ftr"><span>getspray.co.uk</span><span>SPRAY × Circuit</span></div>
+</section>
+
+<!-- 5 DOOR -->
+<section class="page">
+  <div class="door">
+    <div class="k">04 · Safety</div>
+    <h2 style="margin-top:18px">Designed with the<br>door team in mind.</h2>
+    <div class="rule"></div>
+    <p>SPRAY is run by people who work venue doors, so the unit is built around the things that cause trouble on a busy night.</p>
+    <div class="pts">
+      <div><b>No glass in reach</b><p>Bottles are sealed behind the front panel. Guests only touch the screen, the card reader and the buttons.</p></div>
+      <div><b>No cash</b><p>Card-only means there's no float and nothing to break in for. It's never a target.</p></div>
+      <div><b>Fixed to the wall</b><p>A 30 kg steel body bolted to a solid wall, with a lockable chassis. It can't be knocked over or carried off.</p></div>
+      <div><b>In view of CCTV</b><p>We'll place it where cameras and staff already see it, out of the way of busy walkways and fire exits.</p></div>
+      <div><b>Nothing for staff to do</b><p>No stock behind the bar and no cash to reconcile. SPRAY handles any complaint, fault or refund directly.</p></div>
+      <div><b>Easy to switch off</b><p>Staff can turn it off at the socket in an emergency or if it looks faulty. We're on call for the rest.</p></div>
+    </div>
+  </div>
+  <div class="door-ph" style="background-image:url(src/img-004.png)"></div>
+  <div class="ftr" style="right:704px"><span>getspray.co.uk</span><span>SPRAY × Circuit</span></div>
+</section>
+
+<!-- 5b GUEST SAFETY -->
+<section class="page">
+  <div class="hdr"><span>SPRAY × CIRCUIT</span><span class="r">05 — GUEST SAFETY</span></div>
+  <div style="position:absolute;left:64px;top:92px;width:600px">
+    <h2 style="font-size:44px">Wrist and neck.<br><span class="pink">Never the face.</span></h2>
+    <div class="rule"></div>
+    <div class="pts" style="margin-top:0;gap:14px">
+      <div style="padding-top:12px"><b style="font-size:17px">Sprays where it should</b><p style="font-size:13px">The five outlets sit flush in the panel below the display. Each one releases a single short, horizontal burst at wrist or neck height. Nothing sticks out to grab or point.</p></div>
+      <div style="padding-top:12px"><b style="font-size:17px">Instructions on the machine</b><p style="font-size:13px">Printed steps on the front panel: choose, pay, guide your hand or neck to the nozzle, press the button. No guesswork after midnight.</p></div>
+      <div style="padding-top:12px"><b style="font-size:17px">Warnings on every unit</b><p style="font-size:13px">A printed warning across the top of the panel: for external use only, avoid eyes and mouth, may contain allergens. One measured spray per payment, so nobody can keep spraying.</p></div>
+      <div style="padding-top:12px"><b style="font-size:17px">If something goes wrong</b><p style="font-size:13px">If spray gets in an eye, rinse it with clean water, the same first aid as any perfume. SPRAY handles every complaint directly and holds £2m public liability insurance for the units.</p></div>
+      <div style="padding-top:12px"><b style="font-size:17px">Real, lawful fragrances</b><p style="font-size:13px">SPRAY is responsible for every fragrance being a lawful cosmetic product and for the unit meeting electrical-safety rules.</p></div>
+    </div>
+  </div>
+  <div style="position:absolute;right:40px;top:150px;width:700px">
+    <img src="machine_circuit.png" style="width:100%;display:block">
+    <div style="position:absolute;left:67%;top:13%" class="dot">1</div>
+    <div style="position:absolute;left:88%;top:40%" class="dot">2</div>
+    <div style="position:absolute;left:47%;top:73%" class="dot">3</div>
+    <div style="display:flex;gap:26px;margin-top:6px;font-size:12px;color:#bdbbb6;padding-left:60px">
+      <span><b class="pink">1</b> Printed warning strip</span><span><b class="pink">2</b> Flush outlets, one per scent</span><span><b class="pink">3</b> One spray per payment</span>
+    </div>
+  </div>
+  <div class="ftr"><span>getspray.co.uk</span><span>SPRAY × Circuit</span></div>
+</section>
+
+<!-- 6 THE OFFER -->
+<section class="page">
+  <div class="hdr"><span>SPRAY × CIRCUIT</span><span class="r">06 — THE OFFER</span></div>
+  <h2 style="position:absolute;left:64px;top:92px">The Circuit offer.<br><span class="pink">Nothing to lose.</span></h2>
+  <div style="position:absolute;left:64px;right:64px;top:270px;display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:22px;align-items:stretch">
+    <div style="border:1px solid var(--line);border-radius:14px;padding:26px">
+      <div class="k">01 · You earn</div>
+      <div style="font-size:46px;font-weight:300;margin:14px 0 6px">25%</div>
+      <div style="font-size:17px;margin-bottom:12px">of every spray</div>
+      <p style="font-size:13px">About 31p from every £1.50 spray, after VAT and card fees. Paid monthly within 14 days, with a statement from the machine's own sales data. No invoices.</p>
+    </div>
+    <div style="border:1.5px solid var(--pink);border-radius:14px;padding:26px;background:rgba(243,136,192,.06)">
+      <div class="k" style="color:var(--pink)">02 · Guaranteed</div>
+      <div style="font-size:46px;font-weight:300;margin:14px 0 6px">£150 a month,</div>
+      <div style="font-size:30px;font-weight:300;margin-bottom:12px" class="pink">minimum.</div>
+      <p style="font-size:13px">If Circuit's 25% comes to less than £150 in a month, SPRAY tops it up to £150. If it comes to more, Circuit gets the higher amount. Even with zero sales, Circuit is paid.</p>
+    </div>
+    <div style="border:1px solid var(--line);border-radius:14px;padding:26px">
+      <div class="k">03 · Risk-free</div>
+      <div style="font-size:46px;font-weight:300;margin:14px 0 6px">60 days</div>
+      <div style="font-size:17px;margin-bottom:12px">to try it</div>
+      <p style="font-size:13px">If it isn't right for Circuit, we remove everything within 7 days and make good the wall. Circuit keeps what it earned. Zero cost, ever.</p>
+    </div>
+  </div>
+  <div style="position:absolute;left:64px;right:64px;top:592px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px">
+    <div>
+    <div class="k" style="color:var(--fg);margin-bottom:12px">What Circuit takes home each month (its 25%)</div>
+    <div style="display:flex;gap:40px">
+      <div><div class="k">Slow · under 38 a night</div><div style="font-size:24px;margin-top:6px" class="pink">£150<small style="font-size:11px;color:var(--mute)"> guaranteed</small></div></div>
+      <div><div class="k">Quiet · 50 a night</div><div style="font-size:24px;margin-top:6px">£200<small style="font-size:11px;color:var(--mute)"> /month</small></div></div>
+      <div><div class="k">Typical · 100 a night</div><div style="font-size:24px;margin-top:6px">£400<small style="font-size:11px;color:var(--mute)"> /month</small></div></div>
+      <div><div class="k">Busy · 250 a night</div><div style="font-size:24px;margin-top:6px">£1,000<small style="font-size:11px;color:var(--mute)"> /month</small></div></div>
+    </div>
+    </div>
+    <p style="font-size:10.5px;color:#77756f;line-height:1.55;max-width:400px">Illustration, not a forecast. Sprays a night × 13 open nights a month (3 a week) × 31p. 31p = 25% of £1.23, which is £1.50 less VAT at 20% and card fees of about 1.5%. Actual takings depend on footfall, placement and opening hours. If Circuit keeps the unit after the trial, it carries on at the founding partner rate of 25%.</p>
+  </div>
+  <div class="ftr"><span>getspray.co.uk</span><span>SPRAY × Circuit</span></div>
+</section>
+
+<!-- 7 NEXT -->
+<section class="page">
+  <div class="hdr"><span>SPRAY × CIRCUIT</span><span class="r">07 — NEXT STEPS</span></div>
+  <h2 style="position:absolute;left:64px;top:120px">Four steps and<br><span class="pink">Circuit is live.</span></h2>
+  <div class="steps">
+    <div><i>01</i><span><b style="font-weight:400;color:var(--fg)">A 20-minute walk-round.</b> We pick the spot together: toilet corridor, cloakroom queue or smoking exit, in view of CCTV.</span></div>
+    <div><i>02</i><span><b style="font-weight:400;color:var(--fg)">Circuit's screen content.</b> Logo, colours, event posters and the next event to promote. We build it and Circuit signs it off.</span></div>
+    <div><i>03</i><span><b style="font-weight:400;color:var(--fg)">A one-page trial agreement.</b> 60 days, £150 a month guaranteed, and the unit removed within 7 days if it isn't right for Circuit.</span></div>
+    <div><i>04</i><span><b style="font-weight:400;color:var(--fg)">Install.</b> Fitted outside opening hours in under two hours. One wall, one 13 A socket.</span></div>
+  </div>
+  <div class="offer">
+    <div class="k">After the trial</div>
+    <h3>Once Circuit is live, the same Circuit-style setup can roll out to <span class="pink">Bonnies</span> and the other venues, each with its own branding.</h3>
+    <div class="ct"><div class="k" style="margin-bottom:8px">Talk to us</div>hello@getspray.co.uk<br>getspray.co.uk</div>
+  </div>
+  <div class="ftr"><span>SPRAY</span><span>© 2026 · Venue partner proposal for Circuit</span></div>
+</section>
+</body></html>
